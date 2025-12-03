@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Livekarta Tåg Sverige</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css?v=5"> </head>
+<body>
+    <div class="map-container">
+        <div id="map"></div>
+        
+        <div class="controls-container">
+            <div class="search-row">
+                <input type="text" id="map-search-input" placeholder="Tågnr..." class="map-input">
+                <button id="map-search-btn" class="map-btn">🔍</button>
+            </div>
+
+            <select id="filter-product" class="map-select">
+                <option value="all">Alla tågtyper</option>
+            </select>
+            <label class="toggle-row">
+                <input type="checkbox" id="toggle-crossings">
+                <span style="font-size:12px; margin-left:5px;">Visa plankorsningar</span>
+            </label>
+        </div>
+
+        <div class="status-box">
+            <span id="train-count">Laddar tåg...</span>
+            <div id="loading-spinner" class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="js/api.js?v=3"></script>
+    <script src="js/map.js?v=8"></script> </body>
+</html>
